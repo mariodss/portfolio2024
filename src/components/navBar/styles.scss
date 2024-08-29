@@ -1,0 +1,116 @@
+.navbar{
+
+    background-color: rgb(3, 197, 3);
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+
+
+    &_container{
+
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height:inherit;
+        padding: 0px 20px;
+        flex: 1;
+
+        &_logo{
+
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+    
+        }
+
+        &_menu{
+
+            display: flex;
+            list-style:none;
+            text-align: center;
+
+            &_item{
+    
+                line-height: 40px;
+                margin-right: 1.9rem;
+                font-size: 1.5rem;
+
+                &::after{
+                    content: '';
+                    display:block;
+                    height: 3px;
+                    width: 0;
+                    background: transparent;
+                    transition: all 0.5s ease;
+            
+                }
+                &:hover::after{
+
+                    width: 100%;
+                    background:rgb(49, 68, 10);
+                }
+
+                &_links{
+
+                    color: rgba(255, 255, 255, 0.966);
+                    text-decoration: none;
+                    padding: 0.5rem;
+
+                }
+
+            }
+        }
+
+    }
+
+}
+
+.nav-icon{
+    display: none;
+}
+
+
+@media only screen and (max-width : 768px){
+
+    .navbar_container_menu{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        position:absolute;
+        top: 80px;
+        left: -110%;
+        opacity: 1;
+        transition: all 0.5s ease;
+
+        &.active{
+
+            background-color: rgb(3, 197, 3);
+            left: 0px;
+            opacity: 1;
+
+        }
+
+        &_item{
+
+            border-bottom: 1px solid #282828;
+            margin: 0px;
+            padding: 20px 0px; 
+
+        }
+
+    }
+
+    .nav-icon{
+
+        display: block;
+        cursor: pointer;
+        color: white;
+        padding-right: 20px;
+
+    }
+
+
+}
