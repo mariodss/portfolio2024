@@ -10,58 +10,66 @@ import portfolio from "../../images/portfolio.png";
 import todo from "../../images/todo.png";
 import restaurant from "../../images/restaurant.png";
 import library from "../../images/library.png"
+import ecommerce from "../../images/e-commerce.png"
 
 const portfolioData=[
 
 {
     id: 2,
-    name: "calculator",
+    name: "simple calculator",
     image: calculator1,
-    link: 'https://github.com/mariodss/WebAppLibrary',
+    link: 'https://github.com/mariodss/simple-calculator/tree/master',
 
 },
 {
 
     id: 2,
-    name: "calculator2",
+    name: "advanced calculator",
     image: calculator2,
-    link: ''
+    link: 'https://github.com/mariodss/advanced-calculator/tree/master'
 
 },
 {
     id:2,
     name: "clickscounter",
     image: clickscounter,
-    link: ''
+    link: 'https://github.com/mariodss/Clicks-Counter/tree/master'
 
 },
 {
     id:2,
     name: "portfolio2024",
     image: portfolio,
-    link: ''
+    link: 'https://github.com/mariodss/portfolio2024/tree/master'
 
 },
 {
     id:3,
     name:"Mario's Restaurant",
     image: restaurant,
-    link: ''
+    link: 'https://github.com/mariodss/restaurant-website/tree/master'
 
 },
 {
     id:2,
     name:"todoapp",
     image:todo,
-    link: ''
+    link: 'https://github.com/mariodss/To-do-App/tree/master'
 
 },
 {
     id: 4,
     name: "Library Project",
     image:library,
-    link:'',
+    link:'https://github.com/mariodss/WebAppLibrary/tree/master'
 },
+{
+    id:5,
+    name:"E-commerce Website",
+    image:ecommerce,
+    link:'https://github.com/lp362/Group-6'
+
+}
 
 ]
 
@@ -74,16 +82,22 @@ const filterData = [
     },
     {
         filterId: 2,
-        label: 'React Projects'
+        label: 'React Projects (Front-end)'
     },
     {
         filterId: 3,
-        label: 'PHP Projects'
+        label: 'PHP Projects (Front-end)'
     },
     {
 
         filterId: 4,
-        label: 'Django Projects'
+        label: 'Django Projects (Back-end)'
+    },
+    {
+        filterId: 5,
+        label: 'Full-Stack Projects'
+
+
     },
 
 ]
@@ -93,7 +107,6 @@ const Portfolio=()=> {
 
     const [filteredvalue, setFilterValue] = useState(1);
     const [hoveredValue, setHoveredValue] = useState(null);
-    const navigate = useNavigate();
 
 
     function handleFilter(currentID){
@@ -120,8 +133,7 @@ const Portfolio=()=> {
     const handleVisit = (link)=> {
 
         if (link) {
-            navigate(link);
-
+            window.location.href = link;
         }
 
     }
