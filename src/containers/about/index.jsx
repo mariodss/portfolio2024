@@ -17,7 +17,7 @@ const personalDetails = [
     },
     {
         label: "Age:",
-        value: "23",
+        value: "24",
 
 
     },
@@ -40,7 +40,7 @@ const personalDetails = [
 
 ];
 
-const jobSummary = 'Senior Information Systems student with a META front-end developer certificate';
+const jobSummary = "Graduated with a bachelor's degree in Information Systems and obtained a META Front End certification.";
 
 
 const About = () => {
@@ -67,7 +67,7 @@ const About = () => {
 
                     >
 
-                        <h3>Front End Developer</h3>
+                        <h3>Aspiring Web Developer</h3>
                         <p>{jobSummary}</p>
 
                     </Animate>

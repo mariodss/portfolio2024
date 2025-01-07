@@ -18,16 +18,44 @@ export const skillsData =[
 
 
             },
+           
             {
-
-                skillName: "Python",
-                percentage: "60"
-
+                skillName: "ReactJS framework",
+                percentage: "80",
 
             },
 
+            {
+                skillName: "AngularJS framework",
+                percentage: "50",
+            }
+
 
         ],
+
+    },
+
+    {
+
+        label: "BACK END",
+
+        data: [
+            {
+                skillName: 'Python',
+                percentage: "60",
+
+
+            },
+            {
+
+                skillName: "Django framework",
+                percentage: "60",
+
+
+            }
+        ]
+
+
 
     },
     {

@@ -19,7 +19,7 @@ export const data ={
             title: "Intern",
             company: "Epibuild",
             description: "Web development projects using Wordpress",
-            time: '2023-present'
+            time: '2023-2024'
 
         },
 

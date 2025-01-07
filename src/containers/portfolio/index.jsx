@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import './styles.scss';
 import PageHeaderContent from "../../components/navBar/pageHeader";
 import {BsInfoCircleFill} from 'react-icons/bs';
@@ -8,6 +9,7 @@ import clickscounter from "../../images/clickscounter.png";
 import portfolio from "../../images/portfolio.png";
 import todo from "../../images/todo.png";
 import restaurant from "../../images/restaurant.png";
+import library from "../../images/library.png"
 
 const portfolioData=[
 
@@ -15,7 +17,7 @@ const portfolioData=[
     id: 2,
     name: "calculator",
     image: calculator1,
-    link: ''
+    link: 'https://github.com/mariodss/WebAppLibrary',
 
 },
 {
@@ -53,7 +55,13 @@ const portfolioData=[
     image:todo,
     link: ''
 
-}
+},
+{
+    id: 4,
+    name: "Library Project",
+    image:library,
+    link:'',
+},
 
 ]
 
@@ -71,7 +79,12 @@ const filterData = [
     {
         filterId: 3,
         label: 'PHP Projects'
-    }
+    },
+    {
+
+        filterId: 4,
+        label: 'Django Projects'
+    },
 
 ]
 
@@ -80,6 +93,8 @@ const Portfolio=()=> {
 
     const [filteredvalue, setFilterValue] = useState(1);
     const [hoveredValue, setHoveredValue] = useState(null);
+    const navigate = useNavigate();
+
 
     function handleFilter(currentID){
 
@@ -101,6 +116,15 @@ const Portfolio=()=> {
     portfolioData.filter(item=>item.id === filteredvalue)
 
     console.log(filteredItems);
+
+    const handleVisit = (link)=> {
+
+        if (link) {
+            navigate(link);
+
+        }
+
+    }
 
 
 
@@ -154,7 +178,7 @@ const Portfolio=()=> {
                                 {index === hoveredValue && (
                                     <div>
                                         <p>{item.name}</p>
-                                        <button>Visit</button>
+                                        <button onClick={() => handleVisit(item.link)}>Visit</button>
 
                                     </div>
 
